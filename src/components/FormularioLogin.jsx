@@ -5,20 +5,21 @@ export default function FormularioLogin() {
     const [password, setPassword]= useState('');
     const loginform= async(e)=>{
         e.preventDefault();
-        alert('si');
+        
         const login = {documento,password};
         const res = await axios.post('https://backend-jupiter-sena.herokuapp.com/api/',login);
+        console.log(res);
     }
    return (
     <div className="container col-3  position-absolute top-50 start-50 translate-middle shadow-lg p-3 mb-5 bg-body rounded"  >
             <form onSubmit={loginform}>
                 <div className="mb-3">
-                    <label for="LoginDocumento" className="form-label"><h4>Documento</h4></label>
+                    <label className="form-label"><h4>Documento</h4></label>
                     <input type="number" className="form-control" id="LoginDocumento" required onChange={e=>setDocumento(e.target.value)}/>
                    
                 </div>
-                <div NameName="mb-3">
-                    <label for="LoginPassword" className="form-label"><h4>Password</h4></label>
+                <div className="mb-3">
+                    <label  className="form-label"><h4>Password</h4></label>
                     <input type="password" className="form-control" id="LoginPassword" required onChange={e=>setPassword(e.target.value)}/>
                 </div>
                 
