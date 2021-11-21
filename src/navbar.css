@@ -1,0 +1,16 @@
+#icoNavbar {
+    width: 5%;
+    float: left;
+    margin-left: 5%;
+}
+
+#nav{
+    background-color: rgba(255, 255, 255, 0.644);
+    height: 10vh;
+}
+
+#contentNavbarUser button{
+  
+    float: left;
+
+}
