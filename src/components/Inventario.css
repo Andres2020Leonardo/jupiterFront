@@ -1,0 +1,24 @@
+#navsSelectted{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left: 0.5%;
+}
+#navsSelectted button{
+    color: darkgreen;
+    
+}
+.divsInventario{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+tbody tr{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#contentFactura{
+    width: 100%;
+    height: 100%;
+    
+}
+#factura{
+    background-color: rgba(255, 255, 255, 0.8);
+}
