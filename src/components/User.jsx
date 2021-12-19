@@ -1,10 +1,12 @@
 import React from 'react'
 import Producto from '../models/Producto'
 import Transaccion from '../models/Transaccion'
-import Usuario from '../models/Usuario'
+
 import FormularioAgrgarTransaccion from './FormularioAgrgarTransaccion'
 import './Inventario.css'
-export default function Inventario() {
+export default function User() {
+        
+    const fechaActual = new Date();
     return (
         <div className="container-fluid " id="contentFactura">
 
@@ -30,9 +32,9 @@ export default function Inventario() {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td className="text-center p-1 ">00</td>
-                                            <td className="text-center p-1">00</td>
-                                            <td className="text-center p-1">00</td>
+                                        <td className="text-center p-1 ">{fechaActual.getDate()}</td>
+                                            <td className="text-center p-1">{fechaActual.getMonth()+1}</td>
+                                            <td className="text-center p-1">{fechaActual.getFullYear()}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -56,18 +58,16 @@ export default function Inventario() {
 
                         <ul className="nav nav-tabs" id="myTab" role="tablist">
                             <li className="nav-item rounded-top " role="presentation" id="navsSelectted">
-                                <button className=" nav-link active h5" id="tab-user" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Usuarios</button>
+                                <button className=" nav-link active h5" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Transacciones</button>
                             </li>
-                            <li className="nav-item rounded-top " role="presentation" id="navsSelectted">
-                                <button className="nav-link h5" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Transacciones</button>
-                            </li>
+                           
                             <li className="nav-item rounded-top" role="presentation" id="navsSelectted">
                                 <button className="nav-link h5" id="tab-pro" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Productos</button>
                             </li>
                         </ul>
                         <div className="tab-content borderCompleto h-95" id="myTabContent">
-                            <Usuario />
-                            <Transaccion />
+                           
+                            <Transaccion mostrar='user' />
                             <Producto />
 
                         </div>
